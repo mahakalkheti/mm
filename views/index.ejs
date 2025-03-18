@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Update EJS</title>
+    <title>Live Update Website</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1><%= title %></h1>
-    <p><%= description %></p>
-    <a href="/update">Update Content</a> <!-- Button to Change Data -->
+    <h1>Live Update System</h1>
+
+    <!-- Display Current Data -->
+    <h2 id="currentTitle"><%= title %></h2>
+    <p id="currentDesc"><%= description %></p>
+
+    <!-- Input Form to Update Data -->
+    <form action="/update" method="POST">
+        <input type="text" name="title" placeholder="Enter new title" required>
+        <textarea name="description" placeholder="Enter new description" required></textarea>
+        <button type="submit">Update Content</button>
+    </form>
 </body>
 </html>
