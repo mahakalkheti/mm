@@ -7,7 +7,7 @@ app.use(express.static("public")); // Serve Static Files
 app.set("view engine", "ejs");
 
 // JSON File Path
-const filePath = "C:/Users/DELL/Desktop/data.json";
+const filePath = "data.json";
 
 // 🟢 **Homepage Route**
 app.get("/", (req, res) => {
